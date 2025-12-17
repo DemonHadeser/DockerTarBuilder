@@ -15,6 +15,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Remove old caches
+      run: |
+        sudo rm -rf /home/runner/work/_temp/*
+        sudo rm -rf /home/runner/.cache/*
+
     - name: Clean up Docker to free space
       run: |
           docker system prune -a -f
