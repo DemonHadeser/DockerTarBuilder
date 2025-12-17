@@ -19,6 +19,7 @@ jobs:
       run: |
         sudo rm -rf /home/runner/work/_temp/*
         sudo rm -rf /home/runner/.cache/*
+        sudo rm -rf ./.docker_temp*
 
     - name: Clean up Docker to free space
       run: |
